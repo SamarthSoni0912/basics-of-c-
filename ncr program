@@ -1,0 +1,30 @@
+#include<iostream>
+using namespace std;
+int fac(int n){
+    int ans=1;
+    if(n==0){
+        return 1;
+    }
+    for(int i=n;i>=1;i--){
+        ans=ans*i;
+    }
+    return ans;
+}
+float ncr(int n,int r){
+    int nfac=fac(n);
+    int rfac=fac(r);
+    int sub=n-r;
+    int subfac=fac(sub);
+    int sol=nfac/(rfac*subfac);
+    return sol;
+}
+int main(){
+    int n;
+    cout<<"enter n"<<endl;
+    cin>>n;
+    int r;
+    cout<<"enter r r"<<endl;
+    cin>>r;
+    int ans=ncr(n,r);
+    cout<<ans;
+}
