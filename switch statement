@@ -1,0 +1,43 @@
+#include<iostream>
+using namespace std;
+int main(){
+    int num=1;
+    char ch='1';
+    switch(num){
+        case 1:cout<<"this is the first case "<<endl;
+        break;
+        // continue;   
+
+        case 2: cout<<"this is second case"<<endl;
+        break;
+
+        case '1': cout<<"this is character case"<<endl;
+        break;
+
+        default: cout<<"this is default case"<<endl;
+    }
+
+    switch(ch){
+        case 1:cout<<"this is the first case "<<endl;
+        break;
+
+        case 2: cout<<"this is second case"<<endl;
+        break;
+
+        case '1': cout<<"this is character case"<<endl;
+        break;
+
+        default: cout<<"this is default case"<<endl;
+    }
+
+// infinite loop case 
+int i=1;
+while(i){
+    cout<<"entered the while loop"<<endl;
+    switch(num){
+        case 1: cout<<"case 1 of switch in while "<<endl;
+        exit(0);
+    }
+}
+cout<<"came out of the infinite loop"<<endl;
+}
