@@ -1,0 +1,36 @@
+#include<iostream>
+using namespace std;
+int main(){
+    int total_amnt;
+    cout<<"enter amount"<<endl;
+    cin>>total_amnt;
+    int a=0;
+    int b=0;
+    int i=100;
+    for(int j=0;j<4;j++){
+        switch(i){
+        case 100: a=total_amnt/100;
+         cout<<"100 rupee notes="<<a<<endl;
+         b=total_amnt-(a*100);
+         i=50;
+         break;
+
+         case 50: a=b/50;
+         cout<<"50 rupee notes="<<a<<endl;
+         b=b-(a*50);
+         i=20;
+         break;
+
+         case 20: a=b/20;
+         cout<<"20 rupee notes="<<a<<endl;
+         b=b-(a*20);
+         i=1;
+         break;
+
+         case 1: a=b/1;
+         cout<<"1 rupee coin="<<a<<endl;
+         b=b-(a*1);
+         exit(0);
+    }
+    }
+}
