@@ -1,0 +1,25 @@
+#include<iostream>
+using namespace std;
+int setbits(int n){
+    int c=0;
+    while(n!=0){
+        int bit=n&1;
+        if(bit==1){
+            c++;
+        }
+        n=n>>1;
+    }
+    return c;
+}
+int main(){
+    int a;
+    cout<<"a=";
+    cin>>a;
+
+    int b;
+    cout<<"b=";
+    cin>>b;
+    
+     int finalans=setbits(a)+setbits(b);
+    cout<<"total="<<finalans;
+}
