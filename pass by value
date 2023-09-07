@@ -1,0 +1,13 @@
+#include<iostream>
+using namespace std;
+void dummy(int n){
+        n++;
+        cout<<"inside dummy n="<<n<<endl;
+}
+int main(){
+    int n;
+    cout<<"enter original n=";
+    cin>>n;
+    dummy(n);
+    cout<<"n after dummy function="<<n<<endl;
+}
